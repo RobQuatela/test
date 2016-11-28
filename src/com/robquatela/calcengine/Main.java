@@ -7,6 +7,22 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+        String[] statements2 = {
+                "Add 25.0 92.0",
+                "Power 5.0 2.0"     //5.0 ^ 2.0 = 25.0
+        };
+
+        DynamicHelper dHelper = new DynamicHelper(new MathProcessing[] {
+                new Adder()
+        });
+
+        for(String statement: statements2) {
+            String output = dHelper.process(statement);
+            System.out.println(output);
+        }
+
+
         String[] statements = {
                 "Add 1.0",              //Error: incorrect number of values
                 "Add xx 25.0",          //Error: non-numeric data
