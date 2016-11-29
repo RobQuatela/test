@@ -14,7 +14,8 @@ public class Main {
         };
 
         DynamicHelper dHelper = new DynamicHelper(new MathProcessing[] {
-                new Adder()
+                new Adder(),
+                new PowerOf()
         });
 
         for(String statement: statements2) {
